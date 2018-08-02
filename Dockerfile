@@ -13,6 +13,8 @@ ADD assets/entrypoint.sh /entrypoint.sh
 USER ipfs
 WORKDIR /var/lib/ipfs
 
+ENV IPFS_PATH=/var/lib/ipfs/.ipfs
+
 EXPOSE 4001 5001 8080
 
 ENTRYPOINT ["/entrypoint.sh"]
