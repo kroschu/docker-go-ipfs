@@ -3,7 +3,7 @@
 set -x
 set -e
 
-if [ ! -d "${HOME}/.ipfs" ]; then
+if [ ! -d "/var/lib/ipfs/.ipfs" ]; then
   ipfs init
 fi
 

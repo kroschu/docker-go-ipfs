@@ -11,6 +11,7 @@ RUN curl -o "go-ipfs_${IPFS_VERSION}.tar.gz" "https://dist.ipfs.io/go-ipfs/${IPF
 ADD assets/entrypoint.sh /entrypoint.sh
 
 USER ipfs
+WORKDIR /var/lib/ipfs
 
 EXPOSE 4001 5001 8080
 
