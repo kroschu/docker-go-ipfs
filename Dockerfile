@@ -20,4 +20,4 @@ EXPOSE 4001 4002/udp 5001 8080 8081
 VOLUME ["/var/lib/ipfs"]
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["ipfs", "daemon"]
+CMD ["ipfs", "daemon", "--migrate", "--enable-gc"]
