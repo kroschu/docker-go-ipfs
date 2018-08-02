@@ -15,7 +15,7 @@ WORKDIR /var/lib/ipfs
 
 ENV IPFS_PATH=/var/lib/ipfs/.ipfs
 
-EXPOSE 4001 5001 8080
+EXPOSE 4001 4002/udp 5001 8080 8081
 
 VOLUME ["/var/lib/ipfs"]
 
