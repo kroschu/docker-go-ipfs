@@ -17,5 +17,7 @@ ENV IPFS_PATH=/var/lib/ipfs/.ipfs
 
 EXPOSE 4001 5001 8080
 
+VOLUME /var/lib/ipfs
+
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["ipfs", "daemon"]
