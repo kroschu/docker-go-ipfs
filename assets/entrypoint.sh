@@ -10,7 +10,7 @@ if [ ! -d "/var/lib/ipfs/.ipfs" ]; then
 fi
 
 if [ -n "${IPFS_ANNOUNCE}" ]; then
-  ipfs.config --json Addresses.Announce "${IPFS_ANNOUNCE}"
+  ipfs config --json Addresses.Announce "${IPFS_ANNOUNCE}"
 fi
 
 exec $*
