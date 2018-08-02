@@ -6,7 +6,10 @@ RUN curl -o "go-ipfs_${IPFS_VERSION}.tar.gz" "https://dist.ipfs.io/go-ipfs/${IPF
     tar xvzf "go-ipfs_${IPFS_VERSION}.tar.gz" && \
     cp go-ipfs/ipfs /usr/bin/ipfs && \
     rm -rf go-ipfs go-ipfs_${IPFS_VERSION}.tar.gz && \
-    useradd -r -m -d /var/lib/ipfs ipfs
+    useradd -r -m -d /var/lib/ipfs ipfs && \
+    yum install -y iproute && \
+    yum clean all && \
+    rm -rf /var/cache/yum
 
 ADD assets/entrypoint.sh /entrypoint.sh
 
